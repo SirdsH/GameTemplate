@@ -1,0 +1,38 @@
+$navbar-color: #181818;
+
+.container {
+  background: $navbar-color;
+  color: white;
+
+  .nav {
+    height: 3em;
+    justify-content: flex-end;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+
+
+    li:first-child {
+      margin-right: auto;
+    }
+
+    li {
+
+      .fa-shopping-cart {
+        color: white;
+        font-size: 40px;
+      }
+
+      a {
+
+        text-decoration: none;
+        display: block;
+        padding: 1em;
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: white;
+      }
+    }
+  }
+}

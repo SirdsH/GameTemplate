@@ -1,0 +1,29 @@
+.container {
+  background: #181818;
+}
+.container .nav {
+  height: 3em;
+  justify-content: flex-end;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+}
+.container .nav li:first-child {
+  margin-right: auto;
+}
+.container .nav li a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
