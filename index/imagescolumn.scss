@@ -1,0 +1,43 @@
+.img-column {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 74%;
+  top: 152px;
+  border-left: 2px solid whitesmoke;
+
+
+  .cont {
+    margin-left: 20px;
+
+    img {
+      width: 300px;
+      border-radius: 10px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 25px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .img-column {
+    top: 182%;
+    left: 32%;
+    border-left: none;
+
+    .cont {
+
+      img {
+        width: 200px;
+        border-radius: 10px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+}

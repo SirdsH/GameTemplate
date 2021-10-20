@@ -1,6 +1,14 @@
 @import "navbar";
+@import "searchbox";
+@import "imginrow";
+@import "banner";
+@import "imagescolumn";
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
+
+

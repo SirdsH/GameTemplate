@@ -1,38 +1,101 @@
 $navbar-color: #181818;
+$navfont-color: white;
+$navfont-family: 'Lato', sans-serif;
+$navfont-logo: 'IM Fell English SC', serif;
+$navfont-size: 15px;
 
-.container {
+nav {
   background: $navbar-color;
-  color: white;
+  height: 3.125em;
+  width: 100%;
 
-  .nav {
-    height: 3em;
-    justify-content: flex-end;
-    list-style: none;
+
+  .logo {
+    color: $navfont-color;
+    font-size: 24px;
+    font-family: $navfont-logo;
+    font-weight: 500;
+    padding: 0 6.25em;
+    line-height: 2.05em;
+    transition: 0.5s;
+  }
+
+  .bars {
+    font-size: 20px;
+    color: $navfont-color;
+    display: none;
+    float: right;
+  }
+
+  #checkbox {
+    display: none;
+  }
+
+  ul {
     display: flex;
-    flex-flow: row wrap;
-
-
-    li:first-child {
-      margin-right: auto;
-    }
+    justify-content: flex-end;
+    margin-right: 1.25em;
 
     li {
+      display: inline-block;
+      line-height: 2.05em;
+      margin-top: -2.3em;
 
-      .fa-shopping-cart {
-        color: white;
-        font-size: 40px;
+      i {
+        color: $navfont-color;
+        cursor: pointer;
+        font-size: $navfont-size;
       }
 
       a {
-
+        color: $navfont-color;
         text-decoration: none;
-        display: block;
-        padding: 1em;
-        font-family: 'Lato', sans-serif;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: white;
+        font-family: $navfont-family;
+        padding: 0.5em 0.5em;
+        font-size: $navfont-size;
       }
+
+      a:hover {
+        background: white;
+        color: black;
+        transition: 0.5s;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .logo {
+      font-size: 16px;
+      padding-left: 20px;
+      line-height: 3.25em;
+    }
+
+    .bars {
+      display: block;
+      line-height: 2.85em;
+      margin-right: 1.25em;
+      cursor: pointer;
+    }
+
+    ul {
+      display: none;
+
+      li {
+        display: flex;
+        justify-content: center;
+        background: $navbar-color;
+        padding: 50px 0;
+        z-index: 1;
+        border-radius: 0 0 20px 20px;
+      }
+    }
+
+    #checkbox:checked ~ ul {
+      display: flex;
+      flex-direction: column;
+      margin-top: 35px;
+      margin-left: 25px;
+      position: center;
     }
   }
 }
